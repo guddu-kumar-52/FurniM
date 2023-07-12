@@ -9,13 +9,14 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import path from "path";
 import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 //configure
 dotenv.config();
 
 //esmodule fix
 const __filename = fileURLToPath(import.meta.url);
-cont __dirname = path.dirname(__filename);
+const __dirname = dirname(__filename);
 
 //databaseconfig
 connectDB();
