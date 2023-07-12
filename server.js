@@ -8,9 +8,14 @@ import cors from "cors";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import path from "path";
+import { fileURLToPath } from 'url';
 
 //configure
 dotenv.config();
+
+//esmodule fix
+const __filename = fileURLToPath(import.meta.url);
+cont __dirname = path.dirname(__filename);
 
 //databaseconfig
 connectDB();
